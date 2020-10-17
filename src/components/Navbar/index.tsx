@@ -11,13 +11,15 @@ import {
   NavBtnLink,
 } from './syled';
 import { FaBars } from 'react-icons/fa';
-
-export default function Navbar(): ReactElement {
+interface Props {
+  onMenuClick: () => void;
+}
+export default function Navbar({ onMenuClick }: Props): ReactElement {
   return (
     <Nav>
       <NavbarContainer>
         <NavbarLogo to="/">dolla</NavbarLogo>
-        <MenuButton>
+        <MenuButton onClick={() => onMenuClick()}>
           <FaBars />
         </MenuButton>
         <NavMenu>

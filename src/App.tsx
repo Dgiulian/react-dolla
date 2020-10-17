@@ -1,12 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Navbar } from './components';
-import Sidebar from './components/Sidebar';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import HomePage from './pages/home';
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Sidebar />
+      <Route path="/" exact component={HomePage} />
     </Router>
   );
 }

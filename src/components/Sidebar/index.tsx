@@ -11,12 +11,15 @@ import {
   SidebarRoute,
 } from './styled';
 
-interface Props {}
+interface Props {
+  isOpen: boolean;
+  onClose: () => void;
+}
 
-export default function Sidebar({}: Props): ReactElement {
+export default function Sidebar({ isOpen, onClose }: Props): ReactElement {
   return (
-    <SidebarContainer isOpen={false}>
-      <Icon>
+    <SidebarContainer isOpen={isOpen}>
+      <Icon onClick={() => onClose()}>
         <CloseIcon />
       </Icon>
       <SidebarWrapper>

@@ -7,7 +7,7 @@ export const SidebarContainer = styled.div<{ isOpen: boolean }>`
   background-color: #0d0d0d;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: 100;
   display: grid;
   align-items: center;
   left: 0;
