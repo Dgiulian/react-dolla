@@ -1,5 +1,5 @@
 import React, { ReactElement, useState } from 'react';
-import { Navbar, Sidebar } from '../components';
+import { HeroSection, Navbar, Sidebar } from '../components';
 interface Props {}
 
 export default function HomePage(): ReactElement {
@@ -11,6 +11,8 @@ export default function HomePage(): ReactElement {
     <>
       <Navbar onMenuClick={() => toggle()} />
       <Sidebar isOpen={isSidebarOpen} onClose={() => toggle()} />
+
+      <HeroSection />
     </>
   );
 }
