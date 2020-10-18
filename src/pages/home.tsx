@@ -1,5 +1,11 @@
 import React, { ReactElement, useState } from 'react';
-import { HeroSection, Navbar, Sidebar, InfoSection } from '../components';
+import {
+  HeroSection,
+  Navbar,
+  Sidebar,
+  InfoSection,
+  ServicesSection,
+} from '../components';
 import {
   homeObjOne,
   homeObjThree,
@@ -20,6 +26,7 @@ export default function HomePage(): ReactElement {
       <HeroSection />
       <InfoSection {...homeObjOne} />
       <InfoSection {...homeObjTwo} />
+      <ServicesSection />
       <InfoSection {...homeObjThree} />
     </>
   );
