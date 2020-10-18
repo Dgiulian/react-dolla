@@ -22,10 +22,14 @@ import {
   SocialMediaWrap,
   WebsiteRights,
 } from './styled';
+import { animateScroll as scroll } from 'react-scroll';
 
 interface Props {}
 
 const Footer = (props: Props) => {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
   return (
     <FooterContainer>
       <FooterWrap>
@@ -75,7 +79,9 @@ const Footer = (props: Props) => {
         </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to="/">dolla</SocialLogo>
+            <SocialLogo to="/" onClick={() => scrollToTop()}>
+              dolla
+            </SocialLogo>
             <WebsiteRights>
               dolla &copy; {new Date().getFullYear()}
               All rights reserved.
