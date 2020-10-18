@@ -11,24 +11,12 @@ import {
   NavBtnLink,
 } from './syled';
 import { FaBars } from 'react-icons/fa';
+import { useScrollNav } from '../../hooks/useScrollNav';
 interface Props {
   onMenuClick: () => void;
 }
 export default function Navbar({ onMenuClick }: Props): ReactElement {
-  const [scrollNav, setScrollNav] = useState(false);
-  const changeNav = () => {
-    if (window.scrollY >= 80) {
-      setScrollNav(true);
-    } else {
-      setScrollNav(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener('scroll', changeNav);
-    return () => {
-      window.removeEventListener('scroll', changeNav);
-    };
-  }, []);
+  const scrollNav = useScrollNav(180);
   return (
     <Nav scrollNav={scrollNav}>
       <NavbarContainer>
