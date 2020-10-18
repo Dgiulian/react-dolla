@@ -58,11 +58,12 @@ export default function InfoSection({
               <BtnWrapper>
                 <Button
                   to="home"
+                  primary={primary}
+                  dark={dark}
+                  smooth={true}
                   duration={500}
                   spy={true}
                   offset={-80}
-                  primary={primary}
-                  dark={dark}
                 >
                   {buttonLabel}
                 </Button>
