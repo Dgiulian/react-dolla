@@ -17,7 +17,7 @@ export default function HeroSection(): ReactElement {
   const [hover, setHover] = useState(false);
   return (
     <>
-      <HeroContainer>
+      <HeroContainer id="home">
         Helo
         <HeroBg>
           <VideoBg autoPlay loop muted src={'/assets/videos/videobg.mp4'} />
@@ -32,7 +32,15 @@ export default function HeroSection(): ReactElement {
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
           >
-            <Button to="signup" primary={true} dark={true}>
+            <Button
+              to="signup"
+              primary={true}
+              dark={true}
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-80}
+            >
               Get started {hover ? <ArrowForward /> : <ArrowBack />}
             </Button>
           </HeroBtnWrapper>
