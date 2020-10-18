@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 import {
   Nav,
   NavbarLogo,
@@ -15,8 +15,22 @@ interface Props {
   onMenuClick: () => void;
 }
 export default function Navbar({ onMenuClick }: Props): ReactElement {
+  const [scrollNav, setScrollNav] = useState(false);
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', changeNav);
+    return () => {
+      window.removeEventListener('scroll', changeNav);
+    };
+  }, []);
   return (
-    <Nav>
+    <Nav scrollNav={scrollNav}>
       <NavbarContainer>
         <NavbarLogo to="/">dolla</NavbarLogo>
         <MenuButton onClick={() => onMenuClick()}>
@@ -24,9 +38,7 @@ export default function Navbar({ onMenuClick }: Props): ReactElement {
         </MenuButton>
         <NavMenu>
           <NavItem>
-            <NavLink className="active" to="about">
-              About
-            </NavLink>
+            <NavLink to="about">About</NavLink>
           </NavItem>
           <NavItem>
             <NavLink to="discover">Discover</NavLink>
