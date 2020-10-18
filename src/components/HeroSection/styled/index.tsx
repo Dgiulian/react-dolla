@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link as LinkRouter } from 'react-router-dom';
+import { Link as LinkScroll } from 'react-scroll';
 import { MdArrowForward, MdChevronRight } from 'react-icons/md';
 
 export const HeroContainer = styled.section`
@@ -89,7 +89,7 @@ export const HeroBtnWrapper = styled.div`
   align-items: center;
   justify-content: center;
 `;
-export const Button = styled(LinkRouter)<{
+export const Button = styled(LinkScroll)<{
   primary?: boolean;
   big?: boolean;
   dark?: boolean;

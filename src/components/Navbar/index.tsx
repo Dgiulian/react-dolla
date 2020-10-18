@@ -35,7 +35,7 @@ export default function Navbar({ onMenuClick }: Props): ReactElement {
             <NavLink to="services">Services</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="signup">Services</NavLink>
+            <NavLink to="signup">Sign up</NavLink>
           </NavItem>
         </NavMenu>
         <NavBtn>
