@@ -77,7 +77,7 @@ export const NavItem = styled.li`
 
 export const NavLink = styled(LinkScroll)`
   color: #fff;
-  padding: 0 1rem;
+  padding: 1rem;
   cursor: pointer;
   text-decoration: none;
   &.active {
