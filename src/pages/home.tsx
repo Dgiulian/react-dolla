@@ -5,6 +5,7 @@ import {
   Sidebar,
   InfoSection,
   ServicesSection,
+  Footer,
 } from '../components';
 import {
   homeObjOne,
@@ -28,6 +29,7 @@ export default function HomePage(): ReactElement {
       <InfoSection {...homeObjTwo} />
       <ServicesSection />
       <InfoSection {...homeObjThree} />
+      <Footer />
     </>
   );
 }
