@@ -11,9 +11,8 @@ import {
 import icon1 from '../../assets/images/svg1.svg';
 import icon2 from '../../assets/images/svg2.svg';
 import icon3 from '../../assets/images/svg3.svg';
-interface Props {}
 
-export default function ServicesSection({}: Props): ReactElement {
+export default function ServicesSection(): ReactElement {
   return (
     <ServicesContainer id="services">
       <ServicesTitle>Our services</ServicesTitle>

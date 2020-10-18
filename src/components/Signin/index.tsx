@@ -12,9 +12,7 @@ import {
   FormText,
 } from './styled';
 
-interface Props {}
-
-export default function SignIn({}: Props): ReactElement {
+export default function SignIn(): ReactElement {
   return (
     <Container>
       <FormWrap>

@@ -1,9 +1,7 @@
 import React, { ReactElement } from 'react';
 import { SignIn } from '../components';
 
-interface Props {}
-
-export default function SignInPage({}: Props): ReactElement {
+export default function SignInPage(): ReactElement {
   return (
     <div>
       <SignIn />
